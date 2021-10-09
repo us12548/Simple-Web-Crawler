@@ -25,7 +25,7 @@ namespace Wesley.Crawler.SimpleCrawler
             //2.抓取酒店
             //HotelCrawler();
 
-            //3.并发抓取示例
+            //3.并发抓取示例  
             //ConcurrentCrawler();
 
             Console.ReadKey();
@@ -67,7 +67,8 @@ namespace Wesley.Crawler.SimpleCrawler
                 Console.WriteLine("爬虫抓取任务完成！合计 " + links.Count + " 个城市。");
                 Console.WriteLine("耗时：" + e.Milliseconds + "毫秒");
                 Console.WriteLine("线程：" + e.ThreadId);
-                Console.WriteLine("地址：" + e.Uri.ToString());
+                //Console.WriteLine("地址：" + e.Uri.ToString());
+                Console.WriteLine("住址：" + e.Uri.ToString());
             };
             cityCrawler.Start(new Uri(cityUrl)).Wait();//没被封锁就别使用代理：60.221.50.118:8090
         }
