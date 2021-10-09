@@ -37,7 +37,7 @@ namespace Wesley.Crawler.SimpleCrawler
         /// </summary>
         public static void CityCrawler() {
             
-            var cityUrl = "http://hotels.ctrip.com/citylist";//定义爬虫入口URL
+            var cityUrl = "https://hotels.ctrip.com/citylist";//定义爬虫入口URL
             var cityList = new List<City>();//定义泛型列表存放城市名称及对应的酒店URL
             var cityCrawler = new SimpleCrawler();//调用刚才写的爬虫程序
             cityCrawler.OnStart += (s, e) =>
